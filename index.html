@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Start New Project</title>
+  </head>
+  <body>
+    <a href="#main" class="skip-to-content">skip to content</a>
+    <header class="primary-header flex">
+      <div class="logo-box">
+        <img src="./images/logo.png" alt="space tourism logo" class="logo" />
+      </div>
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">menu</span>
+      </button>
+      <nav class="menu-items">
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation underline-indicators flex"
+        >
+          <!-- we use aria-hidden = true so the screen reader does not read this element, this is the obisit of sr-only when screen reader read this element but it does not appear on screen -->
+          <li class="active">
+            <a
+              href="index.html"
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              >services</a
+            >
+          </li>
+          <li>
+            <a
+              href="destination.html"
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              >projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="crew.html"
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              >about us</a
+            >
+          </li>
+          <li>
+            <a
+              href="technology.html"
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              >news</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <script src="main.js"></script>
+  </body>
+</html>
