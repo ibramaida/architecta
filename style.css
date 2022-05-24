@@ -859,17 +859,144 @@ select {
   letter-spacing: 1px;
 }
 
-.expertise {
+.expertise,
+.members {
   margin-bottom: 6rem;
 }
 
 .members-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   justify-content: space-between;
 }
 
-.members {
+figure {
+  text-align: center;
+}
+
+figure div {
+  padding: 0.5rem;
+  position: relative;
+}
+
+figure img {
+  width: 100%;
+  object-fit: cover;
+}
+
+figcaption {
+  padding-block: 2rem;
+}
+figcaption h3 {
+  font-size: var(--fs-400);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+figcaption p {
+  text-transform: uppercase;
+  font-size: var(--fs-200);
+  color: var(--text2);
+}
+
+figure div::after,
+figure div::before {
+  content: "";
+  position: absolute;
+  background-color: var(--brand);
+}
+
+figure:nth-child(odd) div::after {
+  width: 70%;
+  height: 2px;
+  top: 0;
+  left: 0;
+}
+
+figure:nth-child(odd) div::before {
+  height: 70%;
+  width: 2px;
+  top: 0;
+  left: 0;
+}
+figure:nth-child(even) div::after {
+  width: 70%;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+}
+
+figure:nth-child(even) div::before {
+  height: 70%;
+  width: 2px;
+  bottom: 0;
+  right: 0;
+}
+
+figure:nth-child(even) div {
+  margin-top: 2rem;
+}
+
+.subscribe {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.sub-image {
+  grid-row: 1 / span 2;
+  background-color: var(--surface2);
+  padding: 2rem;
+}
+
+.sub-title {
+  text-align: center;
+}
+
+.sub-title h1 {
+  font-size: var(--fs-650);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+
+.sub-email {
+  grid-column: 2 / -1;
+  background-color: var(--surface2);
+  padding: 2rem;
+}
+
+.sub-email h4 {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.sub-email div {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--surface3);
+}
+
+.sub-email input {
+  flex: 1;
+  outline: 0;
+  border: 0;
+  background: none;
+}
+
+.sub-email button {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--brand);
+  border: 0;
+  cursor: pointer;
+}
+
+.subscribe {
   padding-bottom: 10rem;
 }
 
@@ -891,7 +1018,7 @@ select {
   }
 }
 
-@media (min-width: 80em) {
+@media (min-width: 80rem) {
   .primary-navigation {
     --gap: 2rem;
   }
