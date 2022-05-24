@@ -741,7 +741,8 @@ select {
   cursor: pointer;
 }
 
-.expertise h3 {
+.expertise h3,
+.members h2 {
   font-size: var(--fs-500);
   font-weight: 400;
   margin-bottom: 3rem;
@@ -859,6 +860,16 @@ select {
 }
 
 .expertise {
+  margin-bottom: 6rem;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  justify-content: space-between;
+}
+
+.members {
   padding-bottom: 10rem;
 }
 
