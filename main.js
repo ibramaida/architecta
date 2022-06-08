@@ -14,3 +14,25 @@ navToggle.addEventListener("click", () => {
   }
   //   console.log(isVisible);
 });
+
+nav.addEventListener("click", (e) => {
+  // console.log(e.target.tagName);
+  if (e.target.tagName === "A") {
+    nav.setAttribute("data-visible", false);
+    navToggle.setAttribute("aria-expanded", false);
+  }
+});
+
+window.addEventListener("click", (e) => {
+  // console.log(e.target);
+  let isOutside = !e.target.closest("#primary-navigation");
+  if (e.target === navToggle) {
+    return;
+  }
+  if (e.target === nav) {
+    return;
+  } else if (isOutside) {
+    nav.setAttribute("data-visible", false);
+    navToggle.setAttribute("aria-expanded", false);
+  }
+});
